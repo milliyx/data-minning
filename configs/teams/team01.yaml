@@ -1,0 +1,14 @@
+# Team 01 Configuration
+team_id: "team01"
+seed: 42
+
+simulation:
+  population_size: 60000
+  months_history: 6
+  churn_base_rate: 0.045
+  price_sensitivity: 0.25
+  promo_impact: 1.6
+  outage_rate: 1.5
+  outage_impact: 0.35
+  payment_fail_base: 0.018
+  seasonality_strength: 0.25
