@@ -1,0 +1,66 @@
+# Base configuration for all teams
+# Teams override specific parameters in their config files
+
+spark:
+  app_name: "MD-Lakehouse"
+  master: "local[*]"
+  memory: "2g"
+  
+data:
+  base_path: "data"
+  
+simulation:
+  # Default parameters - teams override these
+  months_history: 6
+  population_size: 50000
+  
+  # Business parameters
+  churn_base_rate: 0.05  # 5% monthly churn
+  price_sensitivity: 0.3
+  promo_impact: 1.5  # 50% increase during promos
+  outage_rate: 2  # events per month
+  outage_impact: 0.4  # 40% usage decrease during outages
+  payment_fail_base: 0.02  # 2% baseline payment failure
+  
+  # Plan distribution
+  plan_mix:
+    basic: 0.5
+    standard: 0.35
+    premium: 0.15
+    
+  # Plan prices (monthly)
+  plan_prices:
+    basic: 9.99
+    standard: 19.99
+    premium: 29.99
+    
+  # Seasonality
+  seasonality_strength: 0.2  # 20% variation
+  
+  # Acquisition channels
+  acquisition_channels:
+    - organic
+    - paid_search
+    - social
+    - referral
+    - partnership
+    
+  # Cities distribution
+  cities:
+    - Madrid
+    - Barcelona
+    - Valencia
+    - Sevilla
+    - Zaragoza
+    - Málaga
+    - Murcia
+    - Bilbao
+    
+  # Age range
+  age_min: 18
+  age_max: 75
+
+# CI mode (small data for testing)
+ci_mode: false
+ci_population: 2000
+ci_months: 2

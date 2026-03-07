@@ -1,0 +1,14 @@
+# Team 02 Configuration
+team_id: "team02"
+seed: 123
+
+simulation:
+  population_size: 75000
+  months_history: 6
+  churn_base_rate: 0.055
+  price_sensitivity: 0.35
+  promo_impact: 1.4
+  outage_rate: 2.5
+  outage_impact: 0.45
+  payment_fail_base: 0.022
+  seasonality_strength: 0.15
